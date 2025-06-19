@@ -6,35 +6,36 @@
 
 .search-filter-container {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     margin: 20px 0;
+
     
 }
 .search-box {
     flex: 1;
-    border-block-color: white;
-    /* width: 300px;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px; */
+    display: flex;
+    margin: 10px; 
+    border: 1px solid black;
+    border-radius: 4px;
+    overflow: hidden;
 }   
 .search-box input { 
-    width:85%;
-    padding:10px;
-    border: 1px solid black;
-    border-right:0px;
+    flex: 1;
+    padding: 10px;
+    border: none;
+    outline: none;
 }
 .search-box button { 
-    width:10%;
-    padding:10px;
-    border: 1px solid black;
-    border-left:0px;
+    padding: 10px 20px;
+    border: none;
+    background-color: #eee;
+    cursor: pointer;
 }
 
 
 .filter-dropdown {
-    margin-left: 10px;
+    margin-left: 20px;
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 4px;
