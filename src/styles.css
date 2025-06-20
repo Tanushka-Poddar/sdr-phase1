@@ -7,3 +7,7 @@ html, body {
   box-sizing: border-box;
   overflow-x: hidden;
 }
+
+.container{
+min-width: 100vw;
+}
