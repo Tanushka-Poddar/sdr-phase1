@@ -1,23 +1,28 @@
 <nav class="flex flex-col items-center">
-  <h1 class="text-3xl font-bold mt-4">CATALOGS</h1>
+  <h1 class="text-3xl font-bold mt-4 text-blue-900">CATALOGS</h1>
 </nav>
 
-<div class="flex justify-evenly items-center bg-black p-5 flex-wrap">
-  <div class="text-center text-white m-4">
-    <img src="rn hs.jpg" alt="RN HS" class="w-[100px] h-auto object-contain mb-2.5">
-    <h2 class="text-lg font-semibold">RN HS</h2>
-    <p class="text-sm">Description of Catalog 1</p>
+<div>
+
+  <aside class="w-40 bg-blue-100 p-4 mr-6 mr-2 shadow"> 
+  <select>
+    <option value="" disabled selected>Filter</option>
+    <option value="rn">Round neck</option>
+    <option value="vc">Vertical collar</option>
+    <option value="hs">Half sleeve</option>
+    <option value="kids">Kids</option>
+  </select>
+  </aside>
+
+  <div class="flex justify-evenly items-center p-5 flex-wrap">
+  <div *ngFor="let catalog of catalogs" class="text-blue-950 m-4">
+    <a [routerLink]="catalog.route">
+      <img [src]="catalog.image" [alt]="catalog.name" class="max-w-[200px] h-auto object-contain mb-2.5">
+    </a>
+    <h2 class="text-lg font-semibold">{{ catalog.name }}</h2>
+    <p class="text-sm">{{ catalog.description }}</p>
+  </div>
   </div>
 
-  <div class="text-center text-white m-4">
-    <img src="vc hs.jpg" alt="VC HS" class="w-[100px] h-auto object-contain mb-2.5">
-    <h2 class="text-lg font-semibold">VC HS</h2>
-    <p class="text-sm">Description of Catalog 2</p>
-  </div>
-
-  <div class="text-center text-white m-4">
-    <img src="kids hs.jpg" alt="Kids HS" class="w-[100px] h-auto object-contain mb-2.5">
-    <h2 class="text-lg font-semibold">Kids HS</h2>
-    <p class="text-sm">Description of Catalog 3</p>
-  </div>
 </div>
+
