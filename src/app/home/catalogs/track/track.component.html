@@ -1,1 +1,49 @@
-<p>track works!</p>
+<h1>TRACK</h1>
+
+<a href="product1.pdf" download class="flex gap-1 font-bold text-black no-underline">
+      <img src="pdf_download.png" alt="Download PDF" class="w-5 h-5" />
+      <span>Download pdf</span>
+    </a>
+
+<div class="relative w-full max-w-5xl mx-auto overflow-hidden rounded-lg shadow-lg">
+  <!-- Image -->
+  <img
+    [src]="productImages[currentIndex]"
+    alt="Product Image"
+    class="w-full h-[500px] object-cover transition-all duration-500"
+  />
+
+  <!-- Left Arrow -->
+  <button
+    (click)="prevImage()"
+    [disabled]="currentIndex === 0"
+    class="absolute top-1/2 left-4 transform -translate-y-1/2 bg-white bg-opacity-50 hover:bg-opacity-80 p-2 rounded-full"
+  >
+    <mat-icon>chevron_left</mat-icon>
+  </button>
+
+  <!-- Right Arrow -->
+  <button
+    (click)="nextImage()"
+    [disabled]="currentIndex === productImages.length - 1"
+    class="absolute top-1/2 right-4 transform -translate-y-1/2 bg-white bg-opacity-50 hover:bg-opacity-80 p-2 rounded-full"
+  >
+    <mat-icon>chevron_right</mat-icon>
+  </button>
+
+  <!-- Dots -->
+  <div class="absolute bottom-5 left-1/2 transform -translate-x-1/2 flex gap-2">
+    <span
+      *ngFor="let image of productImages; let i = index"
+      (click)="goToSlide(i)"
+      class="w-4 h-1.5 rounded-full cursor-pointer"
+      [ngClass]="{
+        'bg-white': currentIndex === i,
+        'bg-white bg-opacity-60': currentIndex !== i
+      }"
+    ></span>
+  </div>
+</div>
+
+
+
