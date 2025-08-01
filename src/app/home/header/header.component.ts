@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
+import { HeroimgComponent } from "./heroimg/heroimg.component";
 
 @Component({
   selector: 'app-header',
-  imports: [RouterLink],
+  imports: [RouterLink, HeroimgComponent],
   templateUrl: './header.component.html',
   styleUrl: './header.component.css'
 })

@@ -1,60 +1,46 @@
-<h1>RN HS</h1>
-
-<a href="product1.pdf" download class="flex gap-1 font-bold text-black no-underline">
-      <img src="pdf_download.png" alt="Download PDF" class="w-5 h-5" />
-      <span>Download pdf</span>
-    </a>
-
-<!-- filter icon -->
-<aside class="w-40 bg-emerald-900/30 p-4 mr-6 shadow"> 
-  <select>
-    <option value="" disabled selected>Filter</option>
-    <option value="rn">Round neck</option>
-    <option value="vc">Vertical collar</option>
-    <option value="hs">Half sleeve</option>
-    <option value="kids">Kids</option>
-  </select>
-</aside>
-
-<div class="relative w-full max-w-5xl mx-auto overflow-hidden rounded-lg shadow-lg">
-  <!-- Image -->
-  <img
-    [src]="productImages[currentIndex]"
-    alt="Product Image"
-    class="w-full h-[500px] object-cover transition-all duration-500"
-  />
-
-  <!-- Left Arrow -->
-  <button
-    (click)="prevImage()"
-    [disabled]="currentIndex === 0"
-    class="absolute top-1/2 left-4 transform -translate-y-1/2 bg-white bg-opacity-50 hover:bg-opacity-80 p-2 rounded-full"
-  >
-    <mat-icon>chevron_left</mat-icon>
-  </button>
-
-  <!-- Right Arrow -->
-  <button
-    (click)="nextImage()"
-    [disabled]="currentIndex === productImages.length - 1"
-    class="absolute top-1/2 right-4 transform -translate-y-1/2 bg-white bg-opacity-50 hover:bg-opacity-80 p-2 rounded-full"
-  >
-    <mat-icon>chevron_right</mat-icon>
-  </button>
-
-  <!-- Dots -->
-  <div class="absolute bottom-5 left-1/2 transform -translate-x-1/2 flex gap-2">
-    <span
-      *ngFor="let image of productImages; let i = index"
-      (click)="goToSlide(i)"
-      class="w-4 h-1.5 rounded-full cursor-pointer"
-      [ngClass]="{
-        'bg-white': currentIndex === i,
-        'bg-white bg-opacity-60': currentIndex !== i
-      }"
-    ></span>
-  </div>
+<!-- dynamic breadcrumbing -->
+<div class="h-[10vh] bg-yellow-300 ">
+DYNAMIC BREADCRUMBING - home>catalogs>rnhs
 </div>
 
+<!-- Filter and RHS -->
+<div class="flex flex-row h-[90vh]">
+  <!-- filter -->
+   <div class="w-[20%] bg-blue-300">
+    FILTER dropdowns
+   </div>
+   <!-- RHS -->
+    <div class="flex flex-col w-[80%]">
+      <!-- heading -->
+      <div class="bg-orange-300 h-[15%]">
+      <h1 class="font-bold text-6xl p-3">RNHS</h1>
+
+      <a href="product1.pdf" download class="flex gap-1 pl-3">
+      <img src="pdf_download.png" alt="Download PDF" class="w-5 h-5"/>
+      <span class="self-center">Download pdf</span>
+      </a>
+      </div>
+
+      <!-- Carousels -->
+      <div class="bg-red-300 h-[75%]">
+        SWIPERJS - carousels
+      </div>
+
+      <!-- prev next buttons -->
+      <div class="bg-green-300 inline h-[10%]">
+         <button>
+        <span> < </span>
+        <span>Previous</span> 
+         </button>
+
+        <button>
+        <span> Next</span> 
+        <span> > </span>
+        </button>
+      </div>
+
+    </div>
+    
 
 
+</div>

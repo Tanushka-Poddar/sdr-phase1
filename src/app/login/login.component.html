@@ -1,6 +1,16 @@
 <!-- Full-page background -->
 <div class="min-h-screen flex border-emerald-600/40 border-40 justify-center items-center">
 
+<!-- Breadcrumb -->
+<nav class="flex absolute top-20 left-20 text-sm text-gray-600 space-x-2 mb-4">
+  <!-- Home Link -->
+  <a routerLink="/" class="hover:underline text-gray-500">Home</a>
+  <!-- Separator -->
+  <span class="text-gray-400">›</span>
+  <!-- Current Page (Login) -->
+  <span class="font-semibold text-gray-800">Login</span>
+</nav>
+
   <!-- Login box -->
   <div
     class="w-full max-w-md p-8 shadow-lg flex flex-col "
