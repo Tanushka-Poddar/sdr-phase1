@@ -2,11 +2,11 @@ import { Component } from '@angular/core';
 import {MatIconModule} from '@angular/material/icon';
 import {MatCardModule} from '@angular/material/card';
 import { CommonModule } from '@angular/common';
-import { CatalogsComponent } from "../catalogs.component";
+import {RouterLink} from "@angular/router";
 
 @Component({
   selector: 'app-rnhs',
-  imports: [MatIconModule, MatCardModule, CommonModule, CatalogsComponent],
+  imports: [MatIconModule, MatCardModule, CommonModule, RouterLink],
   templateUrl: './rnhs.component.html',
   styleUrl: './rnhs.component.css'
 })
